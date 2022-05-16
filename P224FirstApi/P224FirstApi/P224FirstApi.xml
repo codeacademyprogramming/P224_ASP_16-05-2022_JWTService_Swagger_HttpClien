@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P224FirstApi</name>
+    </assembly>
+    <members>
+        <member name="T:P224FirstApi.Controllers.CategoriesController">
+            <summary>
+            Kategoriyaya Aid Servisler
+            </summary>
+        </member>
+        <member name="M:P224FirstApi.Controllers.CategoriesController.#ctor(P224FirstApi.DAL.AppDbContext,AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:P224FirstApi.Controllers.CategoriesController.Post(P224FirstApi.DTOs.CategoryDtos.CategoryPostDto)">
+            <summary>
+            Kategoriya Yratmaq Ucun Servis
+            </summary>
+            <param name="categoryPostDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:P224FirstApi.Controllers.CategoriesController.Get(System.Nullable{System.Int32})">
+            <summary>
+            Id-sine Kategoriyanin Tapilmasi
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:P224FirstApi.Controllers.ProductsController.Post(P224FirstApi.DTOs.ProductDtos.ProductPostDto)">
+            <summary>
+            Product Yaranmasi Ucun Service
+            </summary>
+            <param name="productPostDto"></param>
+            <remarks>
+            Sample Request:
+            
+                POST api/Products
+                {
+                    "mehsulunAdi": "Telefom",
+                    "mehsulunQiymeti":3500,
+                    "mehsulunEndirimQiymeti":3000
+                }
+            </remarks>
+            <response code="201">Her Sey Eladi</response>
+            <response code="404">Gonderilen Id-li Obyek Tapilmadi</response>
+            <response code="400">Root-da Id Gonderilmiyib</response>
+            <returns></returns>
+        </member>
+        <member name="T:P224FirstApi.DTOs.CategoryDtos.CategoryPostDto">
+            <summary>
+            Katero Yaranmasi Modeli
+            </summary>
+        </member>
+        <member name="P:P224FirstApi.DTOs.CategoryDtos.CategoryPostDto.Name">
+            <summary>
+            Kategoriyanin Adi
+            </summary>
+        </member>
+        <member name="T:P224FirstApi.DTOs.CategoryDtos.CategoryPostDtoValidator">
+            <summary>
+            Kategoriya Validation
+            </summary>
+        </member>
+        <member name="M:P224FirstApi.DTOs.CategoryDtos.CategoryPostDtoValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:P224FirstApi.DTOs.CategoryDtos.CategoryPutDtoValidator">
+            <summary>
+            Kategoriya Validation
+            </summary>
+        </member>
+        <member name="M:P224FirstApi.DTOs.CategoryDtos.CategoryPutDtoValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

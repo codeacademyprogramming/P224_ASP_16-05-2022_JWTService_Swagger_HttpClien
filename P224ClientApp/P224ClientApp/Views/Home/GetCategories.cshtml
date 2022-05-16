@@ -1,0 +1,38 @@
+﻿@model List<CategoryListDto>
+@{
+    ViewData["Title"] = "GetCategories";
+}
+
+<h1>GetCategories</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <a href=>Create</a>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Products Count</th>
+                        <th>Settings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.ProductsCount</td>
+                            <td>
+                                <a asp-action="UpdateCategory" asp-route-id="@item.Id">Edit</a>
+                                <a asp-action="">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
